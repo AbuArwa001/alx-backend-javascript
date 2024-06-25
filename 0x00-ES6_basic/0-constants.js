@@ -8,8 +8,10 @@ export function getLast() {
   return ' is okay';
 }
 
-export const taskNext = function taskNext() {
+/* eslint-disable import/no-mutable-exports, prefer-const */
+export let taskNext = function taskNext() {
   let combination = 'But sometimes let';
   combination += getLast();
   return combination;
 };
+/* eslint-enable import/no-mutable-exports, prefer-const */
