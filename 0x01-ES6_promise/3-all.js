@@ -1,6 +1,6 @@
 import { uploadPhoto, createUser } from './utils';
 
-async function handleProfileSignup() {
+const handleProfileSignup = async function handleProfileSignup() {
   try {
     // Assuming these functions return promises
     await uploadPhoto();
@@ -16,4 +16,4 @@ async function handleProfileSignup() {
   }
 }
 
-handleProfileSignup();
+export default handleProfileSignup;
