@@ -1,4 +1,5 @@
 export default function concatArrays(array1, array2, string) {
-  array1.push(...array2, ...string);
-  return array1;
+  // Create a new array by spreading the elements from array1, array2, and string
+  const combinedArray = [...array1, ...array2, ...string];
+  return combinedArray;
 }
