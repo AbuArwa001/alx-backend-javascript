@@ -1,3 +1,8 @@
+/**
+ * Generate concatenated string.
+ * @author Khalfan Athman <https://github.com/AbuArwa001>
+ * @returns {string}
+ */
 export default function cleanSet(set, startString) {
   let conc = '';
   if (!startString) {
