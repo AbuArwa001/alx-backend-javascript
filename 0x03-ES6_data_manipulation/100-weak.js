@@ -1,4 +1,9 @@
 export const weakMap = new WeakMap();
+/**
+ * Gets Number of acces the students have to the  .
+ * @author Khalfan Athman <https://github.com/AbuArwa001>
+ *
+ */
 export function queryAPI(endpoint) {
   if (!weakMap.has(endpoint)) {
     weakMap.set(endpoint, 0);
