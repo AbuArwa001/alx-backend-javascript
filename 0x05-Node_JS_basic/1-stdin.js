@@ -4,12 +4,9 @@ process.stdout.write(quiz);
 process.stdin.on('data', (data) => {
   const input = data.toString().trim();
   process.stdout.write(`Your name is: ${input}\n`);
-
-  // Ensure the exit process happens after the output is flushed
-  process.exit();
 });
 
 // Handling exit event to display closing message
-process.on('exit', () => {
+process.stdin.on('end', () => {
   process.stdout.write('This important software is now closing\n');
 });
