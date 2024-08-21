@@ -1,6 +1,5 @@
 import readDatabase from '../routers/utils';
 
-
 const VALID_MAJORS = ['CS', 'SWE'];
 
 /**
