@@ -1,13 +1,13 @@
-const quiz = 'Welcome to Holberton School, what is your name?\n';
-process.stdout.write(quiz);
+process.stdout.write('Welcome to Holberton School, what is your name?\n');
 
-process.stdin.on('data', (data) => {
-  const input = data.toString().trim();
-  process.stdout.write(`Your name is: ${input}\n`);
-  process.exit(); // End the input to simulate the closing of the program
+process.stdin.on('readable', () => {
+  const chunk = process.stdin.read();
+
+  if (chunk) {
+    process.stdout.write(`Your name is: ${chunk}`);
+  }
 });
 
-// Handling exit event to display closing message
-process.on('exit', () => {
+process.stdin.on('end', () => {
   process.stdout.write('This important software is now closing\n');
 });
